@@ -1,0 +1,20 @@
+[package]
+name = "gtkrs4droid"
+version = "0.0.0"
+edition = "2024"
+
+autobins = false
+autolib = false
+
+[lib]
+crate-type = ["staticlib"]
+path = "src/main.rs"
+
+[dependencies]
+glib = "0.20.9"
+
+[dependencies.gtk]
+package = "gtk4"
+version = "0.9.2"
+features = ["v4_16"]
+

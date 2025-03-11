@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app xmlns="https://sp1rit.arpa/pixiewood/" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<metainfo>
+		<component xmlns="https://specifications.freedesktop.org/metainfo/1.0" type="desktop">
+			<id>arpa.sp1rit.gtkrs4droid</id>
+			<name>GtkRs4Droid</name>
+			<releases>
+				<release version="0">
+					<description>
+						<p>Initial release</p>
+					</description>
+				</release>
+			</releases>
+		</component>
+	</metainfo>
+	<style>
+		<theme name="gtk"/>
+		<icon type="generate">
+			<drawable target="foreground" scale=".45" type="svg" path="src://data/logo.svg"/>
+			<color target="background">#FFFFFF</color>
+			<drawable target="monochrome" scale=".45" type="svg" path="src://data/logo.svg"/>
+		</icon>
+	</style>
+	<dependencies>
+		<glib revison="2.80.0">
+			<patch>hack</patch>
+		</glib>
+		<fontconfig/>
+		<rsvg revision="librsvg-2.40">
+			<patch>meson-for-gdkpixbuf</patch>
+		</rsvg>
+		<gdk-pixbuf>
+			<patch>rsvg</patch>
+		</gdk-pixbuf>
+		<gtk/>
+	</dependencies>
+	<build target="gtkrs4droid">
+		<architectures>
+			<arch>aarch64</arch>
+		</architectures>
+	</build>
+</app>

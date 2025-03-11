@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+	<template class="GtkRsDroidWindow" parent="GtkApplicationWindow">
+		<property name="title">GTK Counter</property>
+		<property name="child">
+			<object class="GtkBox">
+				<property name="orientation">vertical</property>
+				<property name="spacing">6</property>
+				<property name="halign">center</property>
+				<property name="valign">center</property>
+				<child>
+					<object class="GtkLabel" id="label"/>
+				</child>
+				<child>
+					<object class="GtkBox">
+						<property name="orientation">horizontal</property>
+						<property name="spacing">2</property>
+						<child>
+							<object class="GtkButton" id="dec">
+								<property name="label">Decrement</property>
+							</object>
+						</child>
+						<child>
+							<object class="GtkButton" id="inc">
+								<property name="label">Increment</property>
+							</object>
+						</child>
+					</object>
+				</child>
+			</object>
+		</property>
+	</template>
+</interface>
