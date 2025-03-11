@@ -1,0 +1,9 @@
+Currently you need to hack skipping a bunch of rust dependencies that
+need pkg-config in their build.rs.
+
+Do this by creating an executable shell script that contains
+    #!/bin/sh
+    echo " "
+
+and set PKG_CONFIG to the path of that script while running
+pixiewood build.
